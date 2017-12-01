@@ -3,7 +3,7 @@
  */
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  /*font-family: Georgia, "Times New Roman", Times, serif;*/
   color: #555;
 }
 
@@ -14,7 +14,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   margin-top: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   font-weight: normal;
   color: #333;
 }
@@ -91,17 +91,20 @@ h6, .h6 {
 .blog-header {
   padding-top: 20px;
   padding-bottom: 20px;
-  text-align: center;
-}
+  padding-right: 50px;
+  text-align: right;
+  background-image: url("http://localhost/wordpress/wp-content/uploads/2017/10/cropped-JS_image.jpg");
+ }
 .blog-title {
   margin-top: 30px;
   margin-bottom: 0;
   font-size: 60px;
-  font-weight: normal;
+  color: #fff;
 }
+
 .blog-description {
   font-size: 20px;
-  color: #999;
+  color: #fff;
 }
 
 
@@ -115,6 +118,18 @@ h6, .h6 {
 }
 
 /* Sidebar modules for boxing content */
+
+.sidebar {
+    float: left;
+    min-height: 1310px;
+    min-height: 1039px;
+    width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 0px;
+}
+
+
 .sidebar-module {
   padding: 15px;
   margin: 0 -15px 15px;

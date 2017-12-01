@@ -27,18 +27,18 @@
 
   <body>
 
-   <div class="blog-masthead">
+   <!--<div class="blog-masthead">
       <div class="container">
          <nav class="blog-nav">
             <a class="blog-nav-item active" href="<?php echo site_url(); ?>">Home</a>
             <?php wp_list_pages( '&title_li=' ); ?>
          </nav>
       </div>
-   </div>
+   </div>-->
 
    <div class="blog-header">
         <h1 class="blog-title">d.an.co.a</h1>
-        <p class="lead blog-description">Dise&ntilde;o y codificaci&oacute;n de software</p>
+        <p class="lead blog-description">Cristian Rodr&iacute;guez Canto</p>
       </div>
    
     <div class="container">
