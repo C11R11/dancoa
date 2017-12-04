@@ -2,9 +2,14 @@
  * Globals
  */
 
+:root {
+    --main-border-color: 1px solid gray;
+}
+
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  /*font-family: Georgia, "Times New Roman", Times, serif;*/
   color: #555;
+  padding-top: 100px;
 }
 
 h1, .h1,
@@ -27,6 +32,7 @@ h6, .h6 {
 @media (min-width: 1200px) {
   .container {
     width: 90%;
+    margin-top: 20px;
   }
 }
 
@@ -92,6 +98,7 @@ h6, .h6 {
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
+  background-color: gray;
 }
 .blog-title {
   margin-top: 30px;
@@ -104,7 +111,6 @@ h6, .h6 {
   color: #999;
 }
 
-
 /*
  * Main column and sidebar layout
  */
@@ -112,10 +118,19 @@ h6, .h6 {
 .blog-main {
   font-size: 18px;
   line-height: 1.5;
+  padding-right: 0px !important;
+  padding-right: 30px !important;
+  border-right: var(--main-border-color);
+}
+
+.blog-sidebar
+{
+    padding-left: 20px;
+    margin-left: 0px !important;
 }
 
 /* Sidebar modules for boxing content */
-.sidebar-module {
+/*.sidebar-module {
   padding: 15px;
   margin: 0 -15px 15px;
 }
@@ -123,7 +138,7 @@ h6, .h6 {
   padding: 15px;
   background-color: #f5f5f5;
   border-radius: 4px;
-}
+}*/
 .sidebar-module-inset p:last-child,
 .sidebar-module-inset ul:last-child,
 .sidebar-module-inset ol:last-child {
@@ -139,7 +154,7 @@ h6, .h6 {
 .pager > li > a {
   width: 140px;
   padding: 10px 20px;
-  text-align: center;
+  text-align: justify;
   border-radius: 30px;
 }
 
@@ -150,6 +165,7 @@ h6, .h6 {
 
 .blog-post {
   margin-bottom: 60px;
+  border-bottom: var(--main-border-color);
 }
 .blog-post-title {
   margin-bottom: 5px;

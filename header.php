@@ -27,19 +27,26 @@
 
   <body>
 
-   <div class="blog-masthead">
+  <!-- <div class="blog-masthead">
       <div class="container">
-         <nav class="blog-nav">
+         <nav class="blog-nav navbar navbar-default navbar-fixed-top">
             <a class="blog-nav-item active" href="<?php echo site_url(); ?>">Home</a>
             <?php wp_list_pages( '&title_li=' ); ?>
          </nav>
       </div>
-   </div>
+   </div>-->
 
-   <div class="blog-header">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="container">
+<a class="navbar-brand" href="<?php echo site_url(); ?>">d.an.co.a</a><!-- <span class="navbar-brand"> Cristian Rodriguez Canto</span>
+<a class="blog-nav-item active pull-right" href="<?php echo site_url(); ?>">Home</a>-->
+</div>
+</nav>
+
+   <!--<div class="blog-header">
         <h1 class="blog-title">d.an.co.a</h1>
-        <p class="lead blog-description">Dise&ntilde;o y codificaci&oacute;n de software</p>
-      </div>
+<p class="lead blog-description">Cristian Rodr&iacute;guez Canto</p>
+      </div>-->
    
     <div class="container">
 
