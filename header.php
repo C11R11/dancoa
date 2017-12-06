@@ -37,9 +37,11 @@
    </div>-->
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
-<div class="container">
-<a class="navbar-brand" href="<?php echo site_url(); ?>">d.an.co.a</a><span class="navbar-brand"> Cristian Rodriguez Canto</span>
-<a class="blog-nav-item active pull-right" href="<?php echo site_url(); ?>">Home</a>
+<div class="container" style="text-align: center; vertical-align: middle;">
+<!-- <a class="pull-left navbar-brand glyphicon glyphicon-home" href="<?php echo site_url(); ?>"> </a>-->
+<a class="navbar-brand" href="<?php echo site_url(); ?>"><i class=" glyphicon glyphicon-home"></i></a>
+<!--  <a class="blog-nav-item active pull-right" href="<?php echo site_url(); ?>">Home</a>-->
+<p class="navbar-text navbar-right">d.an.co.a - Cristian Rodr&iacute;guez Canto</p>
 </div>
 </nav>
 

@@ -8,6 +8,7 @@
 
 body {
   /*font-family: Georgia, "Times New Roman", Times, serif;*/
+  font: normal normal 300 15px/130% "Source Sans Pro", sans-serif;
   color: #555;
   padding-top: 100px;
 }
@@ -116,7 +117,7 @@ h6, .h6 {
  */
 
 .blog-main {
-  font-size: 18px;
+  /*font-size: 18px;*/
   line-height: 1.5;
   padding-right: 0px !important;
   padding-right: 30px !important;
@@ -164,29 +165,62 @@ h6, .h6 {
  */
 
 .blog-post {
-  margin-bottom: 60px;
+ /* margin-top: 60px;*/
   border-bottom: var(--main-border-color);
+  clear: both;
+  min-height: 210px;
+  margin-bottom: 30px;
 }
 .blog-post-title {
-  margin-bottom: 5px;
-  font-size: 40px;
+  margin-bottom: 0px !important;
+  font-size: 16px;
+  font-weight: bold;
 }
 .blog-post-meta {
   margin-bottom: 20px;
+  font-size: 11px;
+  font-weight: 100;
   color: #999;
 }
+
+.post-img-wrap {
+    float: left;
+    margin-right: 20px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.entry-title::after {
+    position: absolute;
+    margin: auto;
+    z-index: 1;
+    content: "";
+    width: 10%;
+    height: 2px;
+    background: #e96656;
+    bottom: -9px;
+    left: 0;
 
 
 /*
  * Footer
  */
 
-.blog-footer {
+/*.blog-footer {
   padding: 40px 0;
   color: #999;
   text-align: center;
   background-color: #f9f9f9;
   border-top: 1px solid #e5e5e5;
+}*/
+
+.blog-footer {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-top: 100px;
+	color: #99979c;
+	text-align: center;
+	background-color: #2a2730;
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
