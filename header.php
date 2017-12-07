@@ -44,8 +44,7 @@
 <p class="navbar-text navbar-right">d.an.co.a - Cristian Rodr&iacute;guez Canto</p>
 </div>
 </nav>
-
-   <!--<div class="blog-header">
+<!--    <div class="blog-header">
         <h1 class="blog-title">d.an.co.a</h1>
 <p class="lead blog-description">Cristian Rodr&iacute;guez Canto</p>
       </div>-->
