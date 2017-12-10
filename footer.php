@@ -1,5 +1,6 @@
   </div> <!-- /.container -->
 
+
 		<footer class="blog-footer">
       <p>Template created with Boostrap and <a href="https://www.taniarascia.com/developing-a-wordpress-theme-from-scratch/">Tania's tutorial </a> 
       </p>

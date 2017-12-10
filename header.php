@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blog Template for Bootstrap</title>
+    <title>DANCOA - Cristian Rodr&iacute;guez Canto</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
@@ -48,5 +48,14 @@
         <h1 class="blog-title">d.an.co.a</h1>
 <p class="lead blog-description">Cristian Rodr&iacute;guez Canto</p>
       </div>-->
-   
-    <div class="container">
+      
+      <!-- <div class="wide">
+      <!-- <h1>BLOG</h1>
+      <p>Lectura </p>
+      <div class="col-xs-5 line"><hr></div>
+      <div class="col-xs-2 logo">Blog</div>
+      <div class="col-xs-5 line"><hr></div>
+      </div>-->
+		
+      <div class="container">
+      

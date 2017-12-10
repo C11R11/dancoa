@@ -1,7 +1,12 @@
 <?php get_header(); ?>
 
-	<div class="row">
 
+<div class="jumbotron single-title">
+              <h3>Dancoa</h3>
+              <b>Hola!, soy Cristian y ac&aacute; pretendo plasmar aprendizajes.</b> 
+			</div>
+	<div class="row">
+	
 		<div class="col-sm-9 blog-main">
 
 			<?php 

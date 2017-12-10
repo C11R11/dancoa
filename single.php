@@ -1,15 +1,28 @@
-<div class="blog-post">
-	<h2 class="blog-post-title"><?php the_title(); ?></h2>
-	<p class="blog-post-meta"><?php the_date(); ?> by <a href="#"><?php the_author(); ?></a></p>
- <?php
-        if ( has_post_thumbnail() ):
-      ?>
-        <a href="<?php the_permalink(); ?>" class="post-list-item-thumb">
-          <?php the_post_thumbnail(); ?>
-        </a>  
-      <?php 
-        endif;
-    ?>
- <?php the_content(); ?>
+<?php get_header(); ?>
 
-</div><!-- /.blog-post -->
+<div class="jumbotron single-title">
+              <h3><?php the_title(); ?></h3>
+              <b>Tags:</b> <span class="label label-warning"><?php the_category('&nbsp;&rsaquo;&nbsp;');?></span>
+			</div>
+	<div class="row">
+	
+		<div class="col-sm-9 blog-main">
+
+			
+			
+			
+			<?php 
+			if ( have_posts() ) : while ( have_posts() ) : the_post();
+  	
+			the_content();
+  
+			endwhile; endif; 
+			?>
+
+		</div> <!-- /.blog-main -->
+
+		<?php get_sidebar(); ?>
+
+	</div> <!-- /.row -->
+
+<?php get_footer(); ?>
