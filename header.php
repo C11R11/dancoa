@@ -43,6 +43,8 @@
 <!--  <a class="blog-nav-item active pull-right" href="<?php echo site_url(); ?>">Home</a>-->
 <p class="navbar-text navbar-right">d.an.co.a - Cristian Rodr&iacute;guez Canto</p>
 </div>
+<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+<?php wp_nav_menu( array( 'theme_location' => 'extra-menu', 'container_class' => 'my_extra_menu_class' , 'container' => 'div' ) );?>
 </nav>
 <!--    <div class="blog-header">
         <h1 class="blog-title">d.an.co.a</h1>
