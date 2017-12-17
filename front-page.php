@@ -1,170 +1,3 @@
-<style>
-.timeline {
-  list-style: none;
-  padding: 20px 0 20px;
-  position: relative;
-}
-
-.timeline:before {
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  content: " ";
-  width: 3px;
-  background-color: #eeeeee;
-  left: 50%;
-  margin-left: -1.5px;
-}
-
-.timeline > li {
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.timeline > li:before,
-.timeline > li:after {
-  content: " ";
-  display: table;
-}
-
-.timeline > li:after {
-  clear: both;
-}
-
-.timeline > li:before,
-.timeline > li:after {
-  content: " ";
-  display: table;
-}
-
-.timeline > li:after {
-  clear: both;
-}
-
-.timeline > li > .timeline-panel {
-  width: 46%;
-  float: left;
-  border: 1px solid #d4d4d4;
-  border-radius: 2px;
-  padding: 20px;
-  position: relative;
-  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-}
-
-.timeline > li > .timeline-panel:before {
-  position: absolute;
-  top: 26px;
-  right: -15px;
-  display: inline-block;
-  border-top: 15px solid transparent;
-  border-left: 15px solid #ccc;
-  border-right: 0 solid #ccc;
-  border-bottom: 15px solid transparent;
-  content: " ";
-}
-
-.timeline > li > .timeline-panel:after {
-  position: absolute;
-  top: 27px;
-  right: -14px;
-  display: inline-block;
-  border-top: 14px solid transparent;
-  border-left: 14px solid #fff;
-  border-right: 0 solid #fff;
-  border-bottom: 14px solid transparent;
-  content: " ";
-}
-
-.timeline > li > .timeline-badge {
-  color: #fff;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 1.4em;
-  text-align: center;
-  position: absolute;
-  top: 16px;
-  left: 50%;
-  margin-left: -25px;
-  background-color: #999999;
-  z-index: 100;
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-}
-
-.timeline > li.timeline-inverted > .timeline-panel {
-  float: right;
-}
-
-.timeline > li.timeline-inverted > .timeline-panel:before {
-  border-left-width: 0;
-  border-right-width: 15px;
-  left: -15px;
-  right: auto;
-}
-
-.timeline > li.timeline-inverted > .timeline-panel:after {
-  border-left-width: 0;
-  border-right-width: 14px;
-  left: -14px;
-  right: auto;
-}
-
-.timeline-badge.primary {
-  background-color: #2e6da4 !important;
-}
-
-.timeline-badge.success {
-  background-color: #3f903f !important;
-}
-
-.timeline-badge.warning {
-  background-color: #f0ad4e !important;
-}
-
-.timeline-badge.danger {
-  background-color: #d9534f !important;
-}
-
-.timeline-badge.info {
-  background-color: #5bc0de !important;
-}
-
-.timeline-title {
-  margin-top: 0;
-  color: inherit;
-}
-
-.timeline-body > p,
-.timeline-body > ul {
-  margin-bottom: 0;
-}
-
-.timeline-body > p + p {
-  margin-top: 5px;
-}
-
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 40vh; /* These two lines are counted as one :-)       */
-
-  display: flex;
-  align-items: center;
-}
-
-.single-title
-{
-   background-image: url(http://dancoa.com/wp-content/uploads/2017/12/2017-12-08-18.32.08-copia.jpg);
-   background-size: cover;
-   /**color: #FFFF00;
-   -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: white;*//
-}
-</style>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -179,7 +12,10 @@
 
     <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/4.0/examples/jumbotron/jumbotron.css">
+    <link href="https://getbootstrap.com/docs/4.0/examples/jumbotron/jumbotron.css" rel="stylesheet">
+    <link href="<?php echo get_bloginfo('template_directory'); ?>/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="<?php echo get_bloginfo('template_directory'); ?>/single-title.css" rel="stylesheet">
+    <link href="<?php echo get_bloginfo('template_directory'); ?>/timeline.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <!-- <link href="<?php echo get_bloginfo('template_directory'); ?>/blog.css" rel="stylesheet">-->
@@ -191,11 +27,12 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <?php wp_head();?>
+    <?php create_bootstrap_menu("header-menu");?>
   </head>
 
-  <body style="padding-top:50px;">
+  <body>
 
-<?php create_bootstrap_menu("header-menu");?>
+
 
 <!-- <div class="jumbotron vertical-center single-title"> 
   <div class="container">
@@ -204,30 +41,21 @@
   </div>
 </div>-->
 
-<!-- <div class="jumbotron single-title">
-<div class="container">
-  <h1 class="display-1">Hello, world!</h1>
-  <p  class="mb-0">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <blockquote class="blockquote">
-  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-</blockquote>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#historias" role="button">Learn more</a>
-  </p>
-</div>
-</div>-->
-
 <div class="jumbotron single-title">
-        <div class="container" style="max-width: 1140px;">
-          <h1 class="display-2">Hello, world!</h1>
-          <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-          <p><a class="btn btn-primary btn-lg" href="#historias" role="button">Historias</a></p>
-        </div>
-      </div>
-
 <div class="container">
+  <h1 class="display-3">¿Qu&eacute; es Dancoa?</h1>
+  <p  class="mb-0">Hoy en día existen cientos de frameworks, tecnologías y lenguajes para desarrollar aplicaciones. 
+  Pero no han conseguido solucionar y automatizar todos los problemas , debemos diseñar y programar nuestras lógicas de negocio.</p>
+  <hr class="my-4">
+  <p>D.AN.CO.A es un espacio cuyo objetivo principal es ayudar a mejorar el diseño, codificación, mantención y flexibilidad 
+  de lógicas de negocio a medida. También es dar a conocer fundamentos con los que se construyen estas soluciones, que son 
+  la base de cualquier framework o arquitectura popular.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#historias" role="button">Ver Historias</a>
+    <a class="btn btn-warning btn-lg" href="#a-quien" role="button">¿A quién le conviene un desarrollo de calidad?</a>
+
+</div>
+</div>
 
 <div class="container" id="historias">
   <div class="page-header">
@@ -237,14 +65,14 @@
     <li>
       <div class="timeline-badge"><i class="glyphicon glyphicon-check"></i></div>
       <div class="timeline-panel">
-        <div class="timeline-heading">
-          <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p>
-        </div>
-        <div class="timeline-body">
-          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
-            Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-        </div>
+        <div class="card" style="width: 200px;">
+  <img class="card-img-top" src="http://dancoa.com/wp-content/uploads/2017/09/thumb.jpg" alt="Card image cap" sizes="(max-width: 200px) 100vw, 200px" width="200" height="200">
+  <div class="card-body">
+    <h4 class="card-title">Card title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
       </div>
     </li>
     <li class="timeline-inverted">
@@ -274,66 +102,40 @@
         </div>
       </div>
     </li>
-    <li class="timeline-inverted">
-      <div class="timeline-panel">
-        <div class="timeline-heading">
-          <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-        </div>
-        <div class="timeline-body">
-          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
-            Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="timeline-badge info"><i class="glyphicon glyphicon-floppy-disk"></i></div>
-      <div class="timeline-panel">
-        <div class="timeline-heading">
-          <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-        </div>
-        <div class="timeline-body">
-          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
-            Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-          <hr>
-          <div class="btn-group">
-            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
-              <i class="glyphicon glyphicon-cog"></i> <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="timeline-panel">
-        <div class="timeline-heading">
-          <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-        </div>
-        <div class="timeline-body">
-          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
-            Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-        </div>
-      </div>
-    </li>
-    <li class="timeline-inverted">
-      <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
-      <div class="timeline-panel">
-        <div class="timeline-heading">
-          <h4 class="timeline-title">Mussum ipsum cacilds</h4>
-        </div>
-        <div class="timeline-body">
-          <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.
-            Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
-        </div>
-      </div>
-    </li>
   </ul>
+</div> 
+
+<div class="jumbotron" style="background-color: #e5c027;" id="a-quien">
+<div class="container">
+<div class="row">
+  <div class="col-4">
+  	
+  </div>
+  <div class="col-8">
+  	<h1 class="display-4">¿A quién le conviene un desarrollo de calidad?</h1>
+<p class="">Una mala empresa constructora puede hacer casas de mala calidad en distintos niveles, puede ser algo simple como una terminación o un mal pintado, o algo tan grave como una filtración de agua, o problemas estructurales. Todos estos problemas pueden verse a primera vista, o pueden ocurrir con el tiempo con la casa ya comprada. Con el software ocurre lo mismo, también existe mala calidad no visible por el usuario. Cuando se encuentra, repararlo puede ser tan fácil como cambiar una puerta, o tan difícil como tener que reconstruirla. La mejor excusa es “Ningún software estará libre de errores…”, el tema es ¿Cuáles errores?
+
+Por muchos motivos existen problemas de calidad en un software, también existen (por motivos mucho más beneficiosos) formas de mejorar la calidad de lo que se construye. El compromiso de “satisfacer los requerimientos de los clientes lo antes posible” puede cumplirse también con calidad. He ahí la diferencia entre un trabajo artesanal y de ingeniería. La ingeniería se basa en métodos y prácticas que permiten un resultado comprobable, el arte se basa en la experiencia y el talento. Para hacer de la programación una labor científica se deben tener conocimientos, adoptar métodos, tener prácticas.
+
+
+En la construcción de una casa es algo concreto, en que se puede entender lo que implicaría agregarle 10 pisos más a un edificio ya construido. En software es virtual, hay cosas que para un usuario son simples, pero internamente es sumamente complejo. La calidad en el código justamente busca hacer que las cosas difíciles sean posibles.
+
+</p>
+Como ingenieros de software, tenemos la difícil tarea de mantener un software de mala calidad, de tratar de extender sus funcionalidades, de rediseñarlo y de ser responsables de que el software haga lo que se pidió y lo que no se pidió. Los requerimientos van a cambiar, es lo único seguro. Esta realidad hay que aceptarla y no luchar por querer cambiarla. También lo es reclamar por tener usuarios que cambian constantemente, o jefes que cambian sus prioridades día a día.
+  	
+  </div>
+
+</div>
+</div>
 </div>
 
-<?php get_footer(); ?>
+<footer class="footer">
+      <div class="container">
+        <span class="text-muted">Wordpress template created with Bootsrap and <a href="https://www.taniarascia.com/developing-a-wordpress-theme-from-scratch/">Tania's tutorial</span>
+      </div>
+    </footer>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
