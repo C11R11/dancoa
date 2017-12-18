@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-
+PAGE
 <div class="jumbotron single-title">
               <h3>Dancoa</h3>
               <b>Hola!, soy Cristian y ac&aacute; pretendo plasmar aprendizajes.</b> 

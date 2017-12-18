@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+SINGLE
 <div class="jumbotron single-title">
               <h3><?php the_title(); ?></h3>
               <b>Tags:</b> <span class="label label-warning"><?php the_category('&nbsp;&rsaquo;&nbsp;');?></span>
