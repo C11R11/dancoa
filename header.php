@@ -11,10 +11,12 @@
     <title>DANCOA - Cristian Rodr&iacute;guez Canto</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo get_bloginfo('template_directory'); ?>/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="<?php echo get_bloginfo('template_directory'); ?>/single-title.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="<?php echo get_bloginfo('template_directory'); ?>/blog.css" rel="stylesheet">
+    <!-- <link href="<?php echo get_bloginfo('template_directory'); ?>/blog.css" rel="stylesheet">-->
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -23,43 +25,15 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <?php wp_head();?>
+    <?php create_bootstrap_menu("header-menu");?>
+    <style>
+
+
+
+</style>
   </head>
-
-  <body>
-
-  <!-- <div class="blog-masthead">
-      <div class="container">
-         <nav class="blog-nav navbar navbar-default navbar-fixed-top">
-            <a class="blog-nav-item active" href="<?php echo site_url(); ?>">Home</a>
-            <?php wp_list_pages( '&title_li=' ); ?>
-         </nav>
-      </div>
-   </div>-->
-
-<?php /*?> <nav class="navbar navbar-inverse navbar-fixed-top">
-<div class="container" style="text-align: center; vertical-align: middle;">
-<!-- <a class="pull-left navbar-brand glyphicon glyphicon-home" href="<?php echo site_url(); ?>"> </a>-->
-<a class="navbar-brand" href="<?php echo site_url(); ?>"><i class=" glyphicon glyphicon-home"></i></a>
-<!--  <a class="blog-nav-item active pull-right" href="<?php echo site_url(); ?>">Home</a>-->
-<p class="navbar-text navbar-right">d.an.co.a - Cristian Rodr&iacute;guez Canto</p>
-</div>
-<?php wp_nav_menu( array( 'theme_location' => 'header-menu' , 'container_class' => 'collapse navbar-collapse' , 'container' => 'div' ) ); ?>
-
-<?php //wp_nav_menu( array( 'theme_location' => 'extra-menu', 'container_class' => 'my_extra_menu_class' , 'container' => 'div' ) );?>
-</nav> <?php */?>
-<?php create_bootstrap_menu("header-menu");?>
-<!--    <div class="blog-header">
-        <h1 class="blog-title">d.an.co.a</h1>
-<p class="lead blog-description">Cristian Rodr&iacute;guez Canto</p>
-      </div>-->
-      
-      <!-- <div class="wide">
-      <!-- <h1>BLOG</h1>
-      <p>Lectura </p>
-      <div class="col-xs-5 line"><hr></div>
-      <div class="col-xs-2 logo">Blog</div>
-      <div class="col-xs-5 line"><hr></div>
-      </div>-->
+  
+    <body>
 		
       
       
