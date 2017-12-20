@@ -24,12 +24,12 @@
 
 <?php 
     //TimeLine boostrap con css
-    require 'timeline.php'
+    //require 'timeline.php'
 ?>
 
 <?php 
     //Artículo
-    'vale_la_pena.php'
+    require 'vale_la_pena.php'
 ?>
 
 <?php get_footer(); ?>

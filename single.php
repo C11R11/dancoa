@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- >!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -9,11 +9,12 @@
 
     <title>single-post-caso-practico-null-object-pattern</title>
 
-    <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body>-->
+
+<?php get_header(); ?>  
 
     <div class="site-wrapper">
 
@@ -23,8 +24,8 @@
 
           <header class="masthead clearfix">
             <div class="inner">
-              <?php wp_head();?>
-    <?php create_bootstrap_menu("header-menu");?>
+              <?php //wp_head();?>
+    <?php //create_bootstrap_menu("header-menu");?>
             </div>
           </header>
 
@@ -40,18 +41,39 @@
     
     endwhile; endif; 
     ?>
+    
+
           </main>
+
+             
 
         </div>
 
       </div>
-
     </div>
+    
+   <footer class="mastfoot">
+          <div class="container">
+            <span class="text-muted">Wordpress template created with Bootsrap and <a href="https://www.taniarascia.com/developing-a-wordpress-theme-from-scratch/">Tania's tutorial</span>
+          </div>
+        </footer>
+    
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+  </body>
+  <?php wp_footer(); ?> 
+</html>
     
 <style>
 /*
  * Globals
  */
+ 
+ .footer
+ {
+ position: none !important;
+ }
 
 /* Links */
 a,
@@ -82,7 +104,6 @@ body {
 }
 body {
   color: #fff;
-  text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 }
 
@@ -173,6 +194,11 @@ body {
 
 .mastfoot {
   color: rgba(255,255,255,.5);
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
 }
 
 
@@ -201,6 +227,7 @@ body {
   .mastfoot,
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    
   }
 }
 
@@ -210,7 +237,5 @@ body {
   .cover-container {
     width: 42rem;
   }
-}
+}*/
 </style>
-
-<?php get_footer(); ?>

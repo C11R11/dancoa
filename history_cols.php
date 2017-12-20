@@ -1,9 +1,16 @@
-HISTORY COLS
-
 <style>
 .col-lg-4 {
     margin-bottom: 1.5rem;
     text-align: center;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+    }
+    
+.row
+{
+    margin-top: 2rem;
 }
 </style>
 
@@ -13,6 +20,9 @@ $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish
  
 <?php if ( $wpb_all_query->have_posts() ) : ?>
 <div class="container">
+
+<h3 class="display-4">&Uacute;ltimos posts</h3>
+
 <div class="row">
 <!-- the loop -->
     <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>

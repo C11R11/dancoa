@@ -6,6 +6,6 @@
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://getbootstrap.com/assets/js/vendor/popper.min.js"></script>
     <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script>
-  </body>
+  
   <?php wp_footer(); ?> 
 </html>
