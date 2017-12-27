@@ -1,4 +1,4 @@
-<div class="jumbotron"style="background-color: #e5c027;" id="a-quien">
+<div class="jumbotron-fluid bg-dark text-white mb-0 pt-5 pb-5" id="a-quien">
 <h1 class="display-4 text-center">&iquest;Vale la pena invertir en c&oacute;digos de baja mantenci&oacute;n?</h1>
 <p>&nbsp;</p>
 <div class="container">
@@ -28,5 +28,3 @@ no luchar por querer cambiarla. Tambi&eacute;n lo es reclamar por tener usuarios
 </div>
 </div>
 </div>
-
-<p>&nbsp;</p>

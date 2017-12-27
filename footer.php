@@ -1,5 +1,5 @@
-<footer class="footer">
-      <div class="container">
+<footer class="bg-dark text-white p-3"><!-- class="footer" -->
+      <div class="container text-center">
         <span class="text-muted">Wordpress template created with Bootsrap and <a href="https://www.taniarascia.com/developing-a-wordpress-theme-from-scratch/">Tania's tutorial</span>
       </div>
     </footer>

@@ -12,7 +12,6 @@
 
     <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo get_bloginfo('template_directory'); ?>/sticky-footer-navbar.css" rel="stylesheet">
     <link href="<?php echo get_bloginfo('template_directory'); ?>/single-title.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
