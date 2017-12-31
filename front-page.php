@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="jumbotron bg-warning text-dark mb-0"><!-- single-title -->
+<div class="jumbotron bg-warning text-dark pt-5 mt-5 mb-0 ml-0 mr-0"><!-- single-title -->
 <div class="container">
   <h1 class="display-3">¿Qu&eacute; es Dancoa?</h1>
   <p  class="mb-0">Hoy en d&iacute;a existen cientos de frameworks, tecnolog&iacute;s y lenguajes para desarrollar aplicaciones. 
@@ -16,8 +16,15 @@
 </div>
 
 <?php 
-    //historia en columnas boostrap 4 nativa
-    require 'history_cols.php'
+    FrontPageHistories("Ejemplos/Tutoriales", 
+                       GetPostArray(array('post_type'=>'post', 'post_status'=>'publish', 'category_name' => 'the-cases' ,'posts_per_page'=>4)),
+                       "bg-dark text-white");
+    FrontPageHistories("Programar es f&aacute;cil", 
+                       GetPostArray(array('post_type'=>'post', 'post_status'=>'publish','category_name' => 'coding-its-easy' ,'posts_per_page'=>4)),
+                      "bg-primary text-white");
+    FrontPageHistories("Etc...",
+                       GetPostArray(array('post_type'=>'post', 'post_status'=>'publish','category_name' => 'etc' ,'posts_per_page'=>4)),
+                       "bg-danger text-white");
 ?>
 
 <?php 

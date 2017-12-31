@@ -127,6 +127,49 @@ function TimeLineViwer()
      */
 }
 
+function GetAllPostArray()
+{
+    return $wpb_all_query = new WP_Query((array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1))); 
+}
+
+function GetPostArray($array)
+{
+    return $wpb_all_query = new WP_Query($array);
+}
+
+function FrontPageHistories($name, $wpb_all_query, $colors = 'bg-light text-dark')
+{
+    $histories = "";  
+
+    if ( $wpb_all_query->have_posts() ) :
+    $histories  .= '<div class="container-fluid pr-10 pl-5 pt-5 pb-5 '.$colors.'" id="historias">';
+        $histories  .= '<h3 class="display-4">'.$name.'</h3>';
+        $histories  .= '<div class="row mt-5">';
+
+        while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post();
+            $histories  .= '<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 ">';
+            $histories  .= '<article>';
+            $histories  .= '<header class="pr-4 pl-4 text-center">';
+            $histories  .= get_the_post_thumbnail(get_the_ID(), 'post-thumbnail', ['class' => 'rounded-circle', 'title' => 'Feature image']);
+            $histories  .= '<h4>'.get_the_title().'</h4>';
+            $histories  .= '<small class="text-muted">'.get_the_date().' - '.get_the_author().'</small>';
+            $histories  .= '<hr></header><div class="pr-4 pl-4">';
+            $histories  .= '<p>'.get_the_excerpt().'</p>';
+            $histories  .= '</div><div class="text-right pr-4">';
+            $histories  .= '<p><a class="btn  btn-info mb-3" href="'.get_the_permalink().'" role="button">Continuar leyendo...</a><br></p>';
+            $histories  .= '</div></article>';
+            $histories  .= '</div><!-- /.col-lg-4 -->';
+    		endwhile;
+        $histories  .= '</div></div>';
+ 
+    wp_reset_postdata();
+    else: 
+        $histories  .= '<p>'._e( 'Sorry, no posts matched your criteria.' ).'</p>';
+    endif;
+    
+    echo $histories;
+}
+
 
 function create_bootstrap_menu( $theme_location ) 
 {
