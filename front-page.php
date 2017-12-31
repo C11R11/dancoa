@@ -1,8 +1,8 @@
 <?php get_header(); ?>
-
+<body>
 <div class="jumbotron bg-warning text-dark pt-5 mt-5 mb-0 ml-0 mr-0"><!-- single-title -->
 <div class="container">
-  <h1 class="display-3">¿Qu&eacute; es Dancoa?</h1>
+  <h1 class="display-3 text-center">¿Qu&eacute; es Dancoa?</h1>
   <p  class="mb-0">Hoy en d&iacute;a existen cientos de frameworks, tecnolog&iacute;s y lenguajes para desarrollar aplicaciones. 
   Pero no han conseguido solucionar y automatizar todos los problemas , debemos dise&ntilde;ar y programar nuestras l&oacute;gicas de negocio.</p>
   <hr class="my-4">
@@ -17,7 +17,7 @@
 
 <?php 
     FrontPageHistories("Ejemplos/Tutoriales", 
-                       GetPostArray(array('post_type'=>'post', 'post_status'=>'publish', 'category_name' => 'the-cases' ,'posts_per_page'=>4)),
+                       GetPostArray(array('post_type'=>'post', 'post_status'=>'publish', 'category_name' => 'examples' ,'posts_per_page'=>4)),
                        "bg-dark text-white");
     FrontPageHistories("Programar es f&aacute;cil", 
                        GetPostArray(array('post_type'=>'post', 'post_status'=>'publish','category_name' => 'coding-its-easy' ,'posts_per_page'=>4)),
@@ -36,5 +36,5 @@
     //Artículo
     require 'vale_la_pena.php'
 ?>
-
+</body>
 <?php get_footer(); ?>

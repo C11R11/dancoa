@@ -137,17 +137,24 @@ function GetPostArray($array)
     return $wpb_all_query = new WP_Query($array);
 }
 
+function CategoryBody($body_class = "bg-dark text-white pt-5")
+{
+    echo '<body class="'.$body_class.'">';
+    FrontPageHistories($name, $wpb_all_query, $colors = 'bg-light text-dark');
+    echo '</body>';
+}
+
 function FrontPageHistories($name, $wpb_all_query, $colors = 'bg-light text-dark')
 {
     $histories = "";  
 
     if ( $wpb_all_query->have_posts() ) :
     $histories  .= '<div class="container-fluid pr-10 pl-5 pt-5 pb-5 '.$colors.'" id="historias">';
-        $histories  .= '<h3 class="display-4">'.$name.'</h3>';
-        $histories  .= '<div class="row mt-5">';
+        $histories  .= '<h3 class="display-4 text-center">'.$name.'</h3>';
+        $histories  .= '<div class="row mt-5 justify-content-center">';
 
         while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post();
-            $histories  .= '<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 ">';
+            $histories  .= '<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">';
             $histories  .= '<article>';
             $histories  .= '<header class="pr-4 pl-4 text-center">';
             $histories  .= get_the_post_thumbnail(get_the_ID(), 'post-thumbnail', ['class' => 'rounded-circle', 'title' => 'Feature image']);
@@ -170,6 +177,27 @@ function FrontPageHistories($name, $wpb_all_query, $colors = 'bg-light text-dark
     echo $histories;
 }
 
+function singlePost($body_class = "bg-dark text-white pt-5")
+{
+    $single  = '<body class="'.$body_class.'">';
+    
+    if ( have_posts() ) : 
+        while ( have_posts() ) : the_post();
+        $single  .= '<div class="jumbotron-fluid">';
+        $single  .= '<p><h3 class="display-4 text-center">'.esc_html( get_the_title() ).'</h3></p>';
+        $single  .= '<div class="row justify-content-center">';
+        $single  .= '<div class="col-xl-7 col-lg-7 col-md-8 col-sm-8 col-xs-10">';
+        $single  .= apply_filters( 'the_content', get_the_content() );
+        $single  .= '</div></div></div>'; 
+        endwhile; 
+    else:
+    $single  .= '<p>'._e( 'Sorry, no posts matched your criteria.' ).'</p>';
+    endif;
+    
+    $single  .= '</body>';
+    
+    echo $single;
+}
 
 function create_bootstrap_menu( $theme_location ) 
 {
