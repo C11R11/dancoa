@@ -22,6 +22,8 @@
       //                   GetPostArray(array('post_type'=>'post', 'post_status'=>'publish', 'category_name' => 'examples' ,'posts_per_page'=>4)),
       //                   $colorClass);?>
 
+<?php HistoriesMedia(GetPostArray(array('post_type'=>'post', 'post_status'=>'publish', 'category_name' => 'coding-its-easy' ,'posts_per_page'=>4)));?>
+
 <?php HistoriesMedia(GetPostArray(array('post_type'=>'post', 'post_status'=>'publish', 'category_name' => 'examples' ,'posts_per_page'=>4)));?>
 </body>
 <?php get_footer();?>

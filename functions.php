@@ -177,29 +177,38 @@ function FrontPageHistories($name, $wpb_all_query, $colors = 'bg-light text-dark
     echo $histories;
 }
 
+function HistoriesMediaFull($name, $wpb_all_query)
+{
+    $histories  .= '<div class="container-fluid'.$colors.'" id="historias">';
+    $histories  .= '<h1 class="display-4 text-left">'.$name.'</h1>';
+    $histories  .= HistoriesMedia($wpb_all_query);
+    $histories  .= '</div>';
+    echo $histories;
+}
+
 function HistoriesMedia($wpb_all_query)
 {
-    $histories = '<div class="container">';
+    $histories = '';//'<div class="container">';
     
     if ( $wpb_all_query->have_posts() ) :
     
     while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post();
-    $histories  .= '<div class="media w-50 border p-2 m-2">';
-    $histories  .= get_the_post_thumbnail(get_the_ID(), array( 64, 64), ['class' => 'rounded mr-3', 'title' => 'Feature image']);
+    $histories  .= '<div class="media border p-2 m-2">';
+    $histories  .= get_the_post_thumbnail(get_the_ID(), array( 100, 100), ['class' => 'align-self-center rounded mr-3', 'title' => 'Feature image']);
     $histories  .= '<div class="media-body">';
     $histories  .= '<b class="mt-0 pt-0 mb-0 pd-0">'.get_the_title().'</b><br>';
-    $histories  .= '<p class="mt-1" style="line-height: 90%;"><small>'.get_the_excerpt();
+    $histories  .= '<p class="mt-1" style="line-height: 95%;"><small>'.get_the_excerpt();
     $histories  .= '<a href="'.get_the_permalink().'">[Continuar leyendo...]</a></small>';
     $histories  .= '</div></div>';
     endwhile;
-    $histories  .= '</div>';
+    //$histories  .= '</div>';
     
     wp_reset_postdata();
     else:
     $histories  .= '<p>'._e( 'Sorry, no posts matched your criteria.' ).'</p>';
     endif;
    
-    echo $histories;
+    return $histories;
 }
 
 function HistoriesCarrousel($wpb_all_query)
