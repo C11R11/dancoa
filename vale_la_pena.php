@@ -1,4 +1,4 @@
-<div class="container-fluid p-0 m-0 bg-dark text-light py-5"  id="a-quien">
+<div class="container-fluid p-0 m-0 bg-secondary text-light py-5"  id="a-quien">
       <h1 class="display-4 text-center">&iquest;Vale la pena invertir en c&oacute;digos de baja mantenci&oacute;n?</h1>
     <div class="row row justify-content-center">
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">

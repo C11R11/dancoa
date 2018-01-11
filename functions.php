@@ -197,7 +197,7 @@ function HistoriesMedia($wpb_all_query)
     $histories  .= get_the_post_thumbnail(get_the_ID(), array( 100, 100), ['class' => 'align-self-center rounded mr-3', 'title' => 'Feature image']);
     $histories  .= '<div class="media-body">';
     $histories  .= '<b class="mt-0 pt-0 mb-0 pd-0">'.get_the_title().'</b><br>';
-    $histories  .= '<p class="mt-1" style="line-height: 95%;"><small>'.get_the_excerpt();
+    $histories  .= '<p class="mt-1 pr-2" style="line-height: 95%; text-align: justify;"><small>'.get_the_excerpt();
     $histories  .= '<a href="'.get_the_permalink().'">[Continuar leyendo...]</a></small>';
     $histories  .= '</div></div>';
     endwhile;
