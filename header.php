@@ -21,7 +21,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <?php wp_head();?>
-    <?php create_bootstrap_menu("header-menu");?>
+    
     <style>
 </style>
   </head>

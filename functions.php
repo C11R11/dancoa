@@ -273,7 +273,7 @@ function HistoriesCarrousel($wpb_all_query)
 
 function singlePost($body_class = "bg-dark text-white pt-5")
 {
-    $single  = '<body class="'.$body_class.'">';
+    $single  = '';//'<body class="'.$body_class.'">';
     
     if ( have_posts() ) : 
         while ( have_posts() ) : the_post();
@@ -287,17 +287,16 @@ function singlePost($body_class = "bg-dark text-white pt-5")
     else:
     $single  .= '<p>'._e( 'Sorry, no posts matched your criteria.' ).'</p>';
     endif;
-    
-    $single  .= '</body>';
+    //$single  .= '</body>';
     
     echo $single;
 }
 
-function create_bootstrap_menu( $theme_location ) 
+function create_bootstrap_menu( $theme_location , $stick_top = "fixed-top") 
 {
     if ( ($theme_location) && ($locations = get_nav_menu_locations()) && isset($locations[$theme_location]) ) 
     {   
-        $menu_list  = '<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">' ."\n";
+        $menu_list  = '<nav class="navbar navbar-expand-md navbar-dark '.$stick_top.' bg-dark">' ."\n";
         $menu_list .= '<a class="navbar-brand" href="' . home_url() . '">' . get_bloginfo( 'name' ) . '</a>';
         $menu_list .= '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">' ."\n";
         $menu_list .= '<span class="navbar-toggler-icon"></span>' ."\n";
