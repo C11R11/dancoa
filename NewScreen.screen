@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="16" y="16" width="633" height="537" text="Browser&#xA;http://..." measuredWidth="633" measuredHeight="537">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:List" id="2" x="16" y="136" height="321" text="Item One&#xA;Item Two&#xA;Item Three&#xA;|Multiple&#xA;Selection&#xA;(bg:green)|Works like this&#xA;For List, Table and Tree" measuredWidth="144" measuredHeight="321">
+    <font/>
+    <items x="0" y="2" width="144" height="21" text="Item One"/>
+    <items x="0" y="23" width="144" height="21" text="Item Two"/>
+    <items x="0" y="44" width="144" height="21" text="Item Three"/>
+    <items x="0" y="65" width="144" height="21" text="|Multiple"/>
+    <items x="0" y="86" width="144" height="21" text="Selection"/>
+    <items x="0" y="107" width="144" height="21" text="(bg:green)|Works like this"/>
+    <items x="0" y="128" width="144" height="21" text="For List, Table and Tree"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="3" x="26" y="78" width="613" text="Title" measuredWidth="613" measuredHeight="59">
+    <font size="43px"/>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="4" x="159" y="136" width="490" height="321" measuredWidth="490" measuredHeight="321"/>
+  <widgets xsi:type="model:Panel" id="5" x="16" y="456" width="633" height="97" measuredWidth="633" measuredHeight="97"/>
+  <widgets xsi:type="model:VLine" id="7" x="176" y="466" height="78" measuredWidth="6" measuredHeight="78"/>
+  <widgets xsi:type="model:VLine" id="8" x="440" y="466" height="78" measuredWidth="6" measuredHeight="78"/>
+  <widgets xsi:type="model:VButtonBar" id="9" x="26" y="463" width="144" text="One&#xA;Two&#xA;Three" measuredWidth="144" measuredHeight="83" selection="0">
+    <font/>
+    <items x="0" y="0" width="144" height="28" text="One"/>
+    <items x="0" y="28" width="144" height="27" text="Two"/>
+    <items x="0" y="55" width="144" height="28" text="Three"/>
+  </widgets>
+  <widgets xsi:type="model:Menu" id="10" x="424" y="88" text="&amp;File,&amp;Edit,&amp;View,~&amp;Window~,&amp;Help" measuredWidth="208" measuredHeight="27">
+    <items x="5" y="0" width="31" height="27" text="&amp;File"/>
+    <items x="36" y="0" width="33" height="27" text="&amp;Edit"/>
+    <items x="69" y="0" width="39" height="27" text="&amp;View"/>
+    <items x="108" y="0" width="57" height="27" text="~&amp;Window~"/>
+    <items x="165" y="0" width="38" height="27" text="&amp;Help"/>
+  </widgets>
+  <widgets xsi:type="model:Text" id="11" x="456" y="466" width="183" height="78" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." measuredWidth="183" measuredHeight="78">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Text" id="12" x="192" y="466" width="241" height="77" text="* A bullet&#xA;* List&#xA;* Is created&#xA;* Like this" measuredWidth="241" measuredHeight="77">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

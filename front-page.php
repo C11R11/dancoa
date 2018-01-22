@@ -2,7 +2,7 @@
 <?php create_bootstrap_menu("header-menu");?>
 <body class="pt-5">
 <div class="row justify-content-center">
-<div class="col-xl-8 col-lg-10 col-md-10 col-sm-12 col-xs-12 bg-light text-dark mb-2">
+<div class="col-xl-10s col-lg-10 col-md-10 col-sm-12 col-xs-12 bg-light text-dark mb-2">
 <div class="row justify-content-center">
 <div class="col-12">
 <div class="jumbotron bg-light text-dark pt-5 mx-0 ml-0 mr-0"><!-- single-title -->
