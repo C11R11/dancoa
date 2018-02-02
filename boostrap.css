@@ -60,10 +60,13 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 1rem;
+  /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
+  font-family: 'Open Sans',Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  /*font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.5;*/
   color: #212529;
   text-align: left;
   background-color: #fff;
@@ -6031,7 +6034,7 @@ button.bg-primary:hover {
 }
 
 .bg-secondary {
-  background-color: /*#868e96*/#b1938b !important;
+  background-color: #868e96 !important;
 }
 
 a.bg-secondary:focus, a.bg-secondary:hover,
@@ -6071,7 +6074,7 @@ button.bg-warning:hover {
 }
 
 .bg-danger {
-  background-color: /*#dc3545*/#da635d !important;
+  background-color: #dc3545 !important;
 }
 
 a.bg-danger:focus, a.bg-danger:hover,
@@ -6081,7 +6084,7 @@ button.bg-danger:hover {
 }
 
 .bg-light {
-  background-color: /*#f8f9fa*/ #dcd0c0 !important;
+  background-color: #f8f9fa !important;
 }
 
 a.bg-light:focus, a.bg-light:hover,
@@ -6091,7 +6094,7 @@ button.bg-light:hover {
 }
 
 .bg-dark {
-  background-color: /*#343a40 #559e83*/#4e4e56 !important;
+  background-color: #343a40!important;
 }
 
 a.bg-dark:focus, a.bg-dark:hover,

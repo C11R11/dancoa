@@ -12,7 +12,6 @@
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo get_bloginfo('template_directory'); ?>/boostrap.css" rel="stylesheet">
-    <link href="<?php echo get_bloginfo('template_directory'); ?>/single-title.css" rel="stylesheet">
     <link href="<?php echo get_bloginfo('template_directory'); ?>/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

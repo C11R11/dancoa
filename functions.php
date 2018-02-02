@@ -137,20 +137,20 @@ function GetPostArray($array)
     return $wpb_all_query = new WP_Query($array);
 }
 
-function CategoryBody($body_class = "bg-dark text-white pt-5")
+function CategoryBody($body_class = "bg-white text-dark pt-5")
 {
     echo '<body class="'.$body_class.'">';
-    FrontPageHistories($name, $wpb_all_query, $colors = 'bg-light text-dark');
+    FrontPageHistories($name, $wpb_all_query, $colors = 'bg-white text-dark');
     echo '</body>';
 }
 
-function FrontPageHistories($name, $wpb_all_query, $colors = 'bg-light text-dark')
+function FrontPageHistories($name, $wpb_all_query, $colors = 'bg-white text-dark')
 {
     $histories = "";  
 
     if ( $wpb_all_query->have_posts() ) :
         $histories  .= '<div class="container-fluid pr-10 pl-5 pt-5 pb-5 '.$colors.'" id="historias">';
-        $histories  .= '<h3 class="display-4 text-center">'.$name.'</h3>';
+        $histories  .= '<h3 class="display-3 text-center">'.$name.'</h3>';
         $histories  .= '<div class="row mt-5 justify-content-center">';
 
         while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post();
@@ -180,7 +180,7 @@ function FrontPageHistories($name, $wpb_all_query, $colors = 'bg-light text-dark
 function HistoriesMediaFull($name, $wpb_all_query)
 {
     $histories  .= '<div class="container-fluid'.$colors.'" id="historias">';
-    $histories  .= '<h1 class="display-4 text-left">'.$name.'</h1>';
+    $histories  .= '<h1 class="display-3 text-left">'.$name.'</h1>';
     $histories  .= HistoriesMedia($wpb_all_query);
     $histories  .= '</div>';
     echo $histories;
@@ -278,7 +278,7 @@ function singlePost($body_class = "bg-dark text-white pt-5")
     if ( have_posts() ) : 
         while ( have_posts() ) : the_post();
         $single  .= '<div class="jumbotron-fluid">';
-        $single  .= '<p><h3 class="display-4 text-center">'.esc_html( get_the_title() ).'</h3></p>';
+        $single  .= '<p><h3 class="display-3 text-center">'.esc_html( get_the_title() ).'</h3></p>';
         $single  .= '<div class="row justify-content-center">';
         $single  .= '<div class="col-xl-7 col-lg-7 col-md-8 col-sm-8 col-xs-10">';
         $single  .= apply_filters( 'the_content', get_the_content() );
@@ -296,7 +296,7 @@ function create_bootstrap_menu( $theme_location , $stick_top = "fixed-top")
 {
     if ( ($theme_location) && ($locations = get_nav_menu_locations()) && isset($locations[$theme_location]) ) 
     {   
-        $menu_list  = '<nav class="navbar navbar-expand-md navbar-dark '.$stick_top.' bg-dark">' ."\n";
+        $menu_list  = '<nav class="navbar navbar-expand-md navbar-dark '.$stick_top.' bg-dark m-0">' ."\n";
         $menu_list .= '<a class="navbar-brand" href="' . home_url() . '">' . get_bloginfo( 'name' ) . '</a>';
         $menu_list .= '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">' ."\n";
         $menu_list .= '<span class="navbar-toggler-icon"></span>' ."\n";

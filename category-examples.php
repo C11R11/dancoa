@@ -1,8 +1,8 @@
 <?php get_header();
-  $colorClass = "bg-light text-dark";
+  $colorClass = "";
 ?>
 <body class="<?php echo $colorClass?>">
-<div class="jumbotron bg-warning text-dark pt-5 mt-5 mb-0 ml-0 mr-0">
+<div class="jumbotron pt-5 mt-5 mb-0 ml-0 mr-0">
 <div class="container">
   <h1 class="display-3 text-center">Ejemplos</h1>
   <p  class="mb-0">Revisión de conceptos de forma pr&aacute;ctica 
